@@ -8,39 +8,44 @@ public class SimpleTest {
 
     @BeforeAll
     static void initDB() {
-        System.out.println("Инициализация БД до тестов");
+        System.out.println("Initializing BD");
     }
 
 
     @BeforeEach
     void OpenYaPage() {
-        Selenide.open("https://yandex.ru");
+        System.out.println("/// ... ");
+      //  Selenide.open("https://yandex.ru");
     }
 
     @AfterEach
     void close() {
-        WebDriverRunner.closeWindow();
+        System.out.println("/// ... ");
+     //   WebDriverRunner.closeWindow();
     }
 
 
-    @BeforeAll
+    @AfterAll
     static void cleanDB() {
-        System.out.println("Очистка БД после тестов");
+        System.out.println("Cleaning BD");
     }
 
     @Test
     void assertTest() {
+        System.out.println("/// ...test1 ");
         //...поиск в новостях
     }
 
     @Test
     void assertTest2() {
+        System.out.println("/// ... test2");
         //...поиск в картинках
     }
 
 
     @Test
     void assertTest3() {
+        System.out.println("/// ... test3");
         Assertions.assertTrue(4 > 3);
     }
 
