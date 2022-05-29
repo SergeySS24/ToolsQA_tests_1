@@ -1,4 +1,4 @@
-package com.sergey;
+package com.sergey.tests;
 
 import org.junit.jupiter.api.*;
 
